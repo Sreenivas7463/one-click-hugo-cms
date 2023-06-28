@@ -53,7 +53,8 @@
 <script src="/app.js"></script>
 <script>
 	function frmsubmited(){
-		document.getElementById().innerHTML = 'Form successfully submitted';
+		document.getElementById("msg").innerHTML = 'Form successfully submitted';
+		document.forms["contact"].reset();
 	}
 	const handleSubmit = (event) => {
   event.preventDefault();
@@ -66,7 +67,7 @@
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => alert("Form successfully submitted"))
+    .then(() => frmsubmited()
     .catch((error) => alert(error));
 };
 
