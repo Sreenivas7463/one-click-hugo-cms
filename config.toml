@@ -1,4 +1,5 @@
 languageCode = "en-us"
 title = "My New Netlify Victor Hugo Site"
 [params]
-  dateFormat = "dd-mm-yyyy"
+ 
+  {{ .Date.Format "2006-01-02" }}
